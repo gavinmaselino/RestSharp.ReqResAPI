@@ -72,4 +72,19 @@ public class ApiTests
             Assert.That(secondDataColor, Is.EqualTo(expectedColor));
         });
     }
+    
+    [Test]
+    public void FetchingUsersEndpoint_Returns_KeepAliveHeader()
+    {
+        const string resource = "users";
+        const string operation = "GET";
+
+        api = new ApiMethods();
+        var response = api.InitialiseEndpoint(BaseUrl, resource, operation)
+            .ExecuteRequest();
+        
+        var valConnection = response.Headers.FirstOrDefault(h => h.Name == "Connection").Value;
+        
+        Assert.That(valConnection, Is.EqualTo("keep-alive"));
+    }
 }
