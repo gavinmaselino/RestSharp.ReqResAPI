@@ -13,7 +13,7 @@ The tests in the project call the endpoints at https://reqres.in/
 To get started with the framework, follow these steps:
 
 * Clone or download the repository to your local machine.
-Open the solution file RestSharpAutomation.sln in Visual Studio or Rider.
+* Open the solution file RestSharp.ReqResAPI.sln in Visual Studio or Rider.
 * Build the solution to restore the NuGet packages.
 
 ## Project Structure ##
