@@ -11,7 +11,7 @@ public class ApiTests
     private const string BaseUrl = "https://reqres.in/api/";
     
     [Test]
-    public void RegisteringAUserInCorrectFormat_Returns200()
+    public void RegisteringAUserInTheCorrectFormat_Returns200()
     {
         const string resource = "register";
         const string operation = "POST";
